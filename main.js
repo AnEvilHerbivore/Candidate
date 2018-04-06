@@ -1,4 +1,4 @@
-const candidate = {name: "Elizabeth Sanger", district: "Tennessee 5th Congressional District", bio: "Was born in a log cabin.", mission: "To get elected by any means necessary."}
+const candidate = {name: "Elizabeth Sanger", district: "Tennessee 5th Congressional District", bio: "Bio: Was born in a log cabin.", mission: "Mission: To get elected by any means necessary."}
 
 const platform = {taxes: "Against", jobs: "For", ifrastructure: "For", health: "For", Crime : "Against"}
 
@@ -37,6 +37,15 @@ parent.appendChild(child);
 // setting article as the parent reference
 parent = child;
 
+//adds thev info passed into from the objects to the specified parent using the specified tag
+function addDOM (parent, tag, info) {
+    child = document.createElement(tag);
+    child.textContent = info;
+    parent.appendChild(child);
+}
 
-
+addDOM(parent, "h1", candidate.name)
+addDOM(parent, "h3", candidate.district)
+addDOM(parent, "h3", candidate.bio);
+addDOM(parent, "h3", candidate.mission);
 
